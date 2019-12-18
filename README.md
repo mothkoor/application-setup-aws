@@ -21,12 +21,18 @@ Public DNS: Servername/PublicIP (created above)
 # Install JAVA on Amazon Application server instance
 
 •	Goto the folder where your pem key is located
-•	Steps for connecting
+•	Steps for connecting (In the terminal/command prompt, type below command)
+
 	>>ssh -i "xx.pem" server-name
+	
 •	Install the latest Java JDK 11 by running below on SSH client
+
 	>>sudo amazon-linux-extras install java-openjdk11
+	
 •	Check whether java is installed by typing
+
 	>> java -version
+	
 •	Set JAVA_HOME by adding below lines in /etc/profile
 
 	export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.5.10-0.amzn2.x86_64
@@ -61,10 +67,12 @@ Public DNS: Servername/PublicIP (created above)
 	exec $CATALINA_HOME/bin/catalina.sh $*
 
 •	Launch below commands for enabling tomcat restart automatically
+
 	chmod 755 /etc/rc.d/init.d/tomcat
 	chkconfig --level 2345 tomcat on
 
 •	Setting up tomcat users by adding below lines in tomcat-users.xml
+
 	<role rolename="manager-gui"/>
 	<role rolename="manager-script"/>
 	<role rolename="manager-jmx"/>
@@ -75,13 +83,17 @@ Public DNS: Servername/PublicIP (created above)
 	<user username="tomcattools" password="tomcat"/>
 
 •	If access is still denied, try commenting value in context.xml at /home/ec2-user/apache-tomcat-9.0.27/webapps/manager/META-INF
+
 •	In the brew set-up, if you want to check the folder where tomcat is installed just use brew ls tomcat. For us, /usr/local/Cellar/tomcat/9.0.27/libexec/webapps
 
 # MySQL Setup
 
 •	Goto Amazon console-->Services-->Storage-->RDS
 •	Create mysql8.0+ database. Database name: <<>> Username: <<>> Password: <<>>
-•	Connecting to it
+•	Connecting to it using below command
+
 •	mysql -h <<servername>> -P <<port>> -u <<username>> -p
+	
 •	Cannot connect to DB Server. Try ping to <<DB Server name>>
+	
 •	Try adding your public ip in the inbound and outbound traffic of the database instance. Specifying TCP, 3306 and MYSQL Type.
