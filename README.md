@@ -22,7 +22,7 @@ Public DNS: Servername/PublicIP (created above)
 
 •	Goto the folder where your pem key is located
 •	Steps for connecting
->>ssh -i "xx.pem" server-naeme
+	>>ssh -i "xx.pem" server-naeme
 •	Install the latest Java JDK 11 by running below on SSH client
 	>>sudo amazon-linux-extras install java-openjdk11
 •	Check whether java is installed by typing
