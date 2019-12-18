@@ -4,24 +4,31 @@ Instructions for setting up your web application on Amazon Web Services ( Steps 
 # Set-up on Amazon AWS
 
 •	Activate the credit card account
+
 •	Create EC2 Instance (Free tier allowed)
+
 •	Check Public IP details which include
 •       Server name: <<XX>>.compute.amazonaws.com
 •	IP:  AA.BB.CC.DD
-•	Download key pair to the local system. This pem file will be used for connecting to the Amazon application server instance
+	
+•	Download key pair to the local system. The key pair file (.pem file) will be used for connecting to the Amazon application server instance
 
-# CyberDuck setup (Cyberduck for Mac, Windows user can use winscp)
+# CyberDuck setup (Cyberduck for Mac, Windows user can use winscp/putty)
 
 •	To connect using Cyberduck
-Public DNS: Servername/PublicIP (created above)
+Specify public DNS: Servername/PublicIP (created above)
+
 •	User name: ec2-user
+
 •	Password: empty
-•	Pass the key of pem address
+
+•	Pass the PEM file by using browse option
 
 # Install JAVA on Amazon Application server instance
 
 •	Goto the folder where your pem key is located
-•	Steps for connecting (In the terminal/command prompt, type below command)
+
+•	In the terminal/command prompt, type below command
 
 	>>ssh -i "xx.pem" server-name
 	
@@ -39,7 +46,7 @@ Public DNS: Servername/PublicIP (created above)
 	export JRE_HOME=/usr/lib/jvm/jre-11-openjdk-11.0.5.10-0.amzn2.x86_64
 	export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 	
-•	Switch to root user before adding below lines in profile. To switch follow below lines
+•	Switch to root user before adding below lines in profile. To switch follow below commands
 
 	sudo su
 	passwd root
@@ -92,7 +99,9 @@ Public DNS: Servername/PublicIP (created above)
 
 •	If access is still denied, try commenting value in context.xml at /home/ec2-user/apache-tomcat-9.0.27/webapps/manager/META-INF
 
-•	In the brew set-up, if you want to check the folder where tomcat is installed just use brew ls tomcat. For us, /usr/local/Cellar/tomcat/9.0.27/libexec/webapps
+•	In the brew set-up, if you want to check the folder where tomcat is installed just use command 
+
+>>brew ls tomcat
 
 # MySQL Setup
 
