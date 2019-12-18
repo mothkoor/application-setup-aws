@@ -28,10 +28,13 @@ Public DNS: Servername/PublicIP (created above)
 •	Check whether java is installed by typing
 	>> java -version
 •	Set JAVA_HOME by adding below lines in /etc/profile
+
 	export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.5.10-0.amzn2.x86_64
 	export JRE_HOME=/usr/lib/jvm/jre-11-openjdk-11.0.5.10-0.amzn2.x86_64
 	export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+	
 •	Switch to root user before adding below lines in profile. To switch follow below lines
+
 	sudo su
 	passwd root
 	create a new password for root
