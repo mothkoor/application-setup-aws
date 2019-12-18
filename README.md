@@ -1,7 +1,6 @@
-# Setting up on AWS
-Instructions for setting up your web application on Amazon Web Services ( Steps include JAVA, Tomcat and MYSQL Setup)
+# Instructions for setting up your web application on Amazon Web Services ( Steps include JAVA, Tomcat and MYSQL Setup)
 
-# Set-up on Amazon AWS
+# Activate AWS & Create instance
 
 •	Activate the credit card account
 
