@@ -48,13 +48,21 @@ Public DNS: Servername/PublicIP (created above)
 # Tomcat setup
 
 •	Download latest version of tomcat:- https://tomcat.apache.org/download-90.cgi 
+
 •	Copy the file through putty/Cyberduck
+
 •	Transfer the tar file to Linux EC2 server and unzip
+
 •	Use tax -zxvf <<>>.jar. If there is error in gzip use, then just use command tar xvf <<>>.tar
+
 •	Goto tomcat bin folder to start and shutdown the instance
+
 •	Try accessing on public IP at 8080 port
+
 •	If this does not work, check inbound traffic on the EC2 aws console. Add port 8080 to inbound traffic (Goto security groups option on AWS console)
+
 •	To change port goto server.xml at /home/ec2-user/apache-tomcat-9.0.27/conf
+
 •	To restart tomcat server automatically when the ec2 restarts, create following script in /etc/rc.d/init.d/
 
 	!/bin/sh
@@ -89,7 +97,9 @@ Public DNS: Servername/PublicIP (created above)
 # MySQL Setup
 
 •	Goto Amazon console-->Services-->Storage-->RDS
+
 •	Create mysql8.0+ database. Database name: <<>> Username: <<>> Password: <<>>
+
 •	Connecting to it using below command
 
 •	mysql -h <<servername>> -P <<port>> -u <<username>> -p
