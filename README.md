@@ -100,7 +100,7 @@ Specify public DNS: Servername/PublicIP (created above)
 
 •	In the brew set-up, if you want to check the folder where tomcat is installed just use command 
 
->>brew ls tomcat
+	>>brew ls tomcat
 
 # MySQL Setup
 
