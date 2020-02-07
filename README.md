@@ -117,7 +117,7 @@ Specify public DNS: Servername/PublicIP (created above)
 •	Try adding your public ip in the inbound and outbound traffic of the database instance. Specifying TCP, 3306 and MYSQL Type.
 
 
-# Connect to other servers over Internet gatewat
+# Connect to other servers over Internet gateway
 
 •	Edit VPC security groups to add HTTP/HTTPS connections for all ports
 
