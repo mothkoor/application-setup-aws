@@ -117,13 +117,26 @@ Specify public DNS: Servername/PublicIP (created above)
 •	Try adding your public ip in the inbound and outbound traffic of the database instance. Specifying TCP, 3306 and MYSQL Type.
 
 
-# Connect to other servers over Internet gateway
+# Cannot fire http/https requests from EC2 instance
 
-•	Edit VPC security groups to add HTTP/HTTPS connections for all ports
+•	Check Security groups,make sure outbound settings allow all port access
 
-•	Associate VPC security group with EC2 instance
+•	Check NACL groups, make sure outbound settings allow all port access
 
-•	Reboot the EC2 instance not just the tomcat server
+•	Check if Internet gateway is configured
+
+•	Login to EC2 instance and try access the server you intend to send requests. e.g. wget http://www.google.com
+
+•	Check https requets e.g. wget https://www.google.com
+
+•	Wierd error in my case is that Linux AMI instance blocked http requests and not https
+
+•	If wget do not work, then try deleting AMI instance and create RHEL type of EC2 instance and deploy your code on the new instance
+
+•	Try wget or curl now, it should work.
+
+
+
 
 
 
